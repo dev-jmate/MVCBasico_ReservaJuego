@@ -9,8 +9,8 @@ namespace MVCBasico_ReservaJuego.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdReserva { get; set; }
-        public Juego IdJuego { get; set; }
-        public Cliente NroCliente { get; set; }
+        public int IdJuego { get; set; } //No nos deja con la clase Juego, lo cambiamos a int
+        public int NroCliente { get; set; } //No nos deja con la clase Cliente, lo cambiamos a int
     }
   
 }
