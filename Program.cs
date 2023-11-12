@@ -12,6 +12,7 @@ namespace MVCBasico_ReservaJuego
             //Aqui agrego el servicio para que la aplicacion web sepa que voy a usar Entity Framework para que EF sepa donde va a estar la base de datos que tiene que usar para leer y grabar datos
 
             builder.Services.AddDbContext<Context.ClienteDatabaseContext>(options =>options.UseSqlServer(builder.Configuration["ConnectionString:ClienteDBConnection"]));
+            builder.Services.AddDbContext<Context.ReservaDatabaseContext>(options => options.UseSqlServer(builder.Configuration["ConnectionString:ReservaDBConnection"]));
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
